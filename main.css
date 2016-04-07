@@ -1,10 +1,13 @@
+
+/*LEFT TO DO: change the 'genre' boxes to two columns */
+
 * {
   box-sizing: border-box;
 }
 /* all elements have the same border */
 nav, .col {
   border: 2px solid black;
-  margin: 3px;
+  margin: 4px;
 }
 
 /* Nav Bar */
@@ -31,6 +34,11 @@ nav ul li a.visited {
   text-decoration: none;
 }
 
+/*column height*/
+.col {
+  height: 370px;
+}
+
 
 /* Side Bar */
 .sidebar {
@@ -42,6 +50,12 @@ nav ul li a.visited {
 .sidebar fieldset {
   border: none;
   max-width: 100%;
+  font-size: .85em;
+  padding: 5px;
+  margin: 5px;
+}
+#album, #artist {
+  width: 140px;
 }
 
 /*Song Section*/
@@ -75,3 +89,14 @@ section.song >ul li {
 section.song >ul li:not(:last-child) {
   border-right: 1px solid black;
   }
+
+/*clearfix just in case!*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

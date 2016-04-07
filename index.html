@@ -15,51 +15,47 @@
   </nav>
 <!-- main content except for header/footer -->
    <wrapper>
-     <div class="sidebar col left">
-       <form>
+     <div class="sidebar col left cf">
          <fieldset>
            <label for="songLength">Song length:
-            <input type="range" id="songLength">
+            <p><input type="range" id="songLength"></p>
            </label>
           </fieldset>
           <fieldset> 
            <label for="artist">Artist:
-            <input name="artist" list="artistList">
-              <datalist id="artistList">
-              <option value="Mozart">
-              <option value="Tzhaikovsky">
-              <option value="Chopin">
-              <option value="Beethoven">
-              <option value="Bach">
-              </datalist>
+              <p><select id="artist">
+              <option value="Mozart">Mozart</option>
+              <option value="Tzhaikovsky">Tzchaikovsky</option>
+              <option value="Chopin">Chopin</option>
+              <option value="Beethoven">Beethoven</option>
+              <option value="Bach">Bach</option>
+              </select></p>
            </label>
           </fieldset>
           <fieldset>
            <label for="album">Album:
-            <input name="album" list="albumList">
-              <datalist id="albumList">
-              <option value="The Magic Flute">
-              <option value="Swan Lake">
-              <option value="Fantasie">
-              <option value="Opus no.6">
-              <option value="Fugue no.32">
-              </datalist>
+              <p><select id="album">
+              <option value="The Magic Flute">The Magic Flute</option>
+              <option value="Swan Lake">Swan Lake</option>
+              <option value="Fantasie">Fantasie</option>
+              <option value="Opus no.6">Opus no.6</option>
+              <option value="Fugues and Preludes">Fugues and Preludes</option>
+              </select></p>
            </label>
           </fieldset>
           <fieldset>
            <legend>Genre</legend>
            <label for="genre">
-            <input type="checkbox" name="baroque" value="baroque"> Baroque
-            <input type="checkbox" name="classical" value="classical"> Classical
-            <input type="checkbox" name="romantic" value="romantic"> Romantic
-            <input type="checkbox" name="opera" value="opera"> Opera
-            <input type="checkbox" name="ballet" value="ballet"> Ballet
+            <p><input class="l"type="checkbox" name="baroque" value="baroque"> Baroque</p>
+            <p><input class="r"type="checkbox" name="classical" value="classical"> Classical</p>
+            <p><input class="l"type="checkbox" name="romantic" value="romantic"> Romantic</p>
+            <p><input class="r"type="checkbox" name="opera" value="opera"> Opera</p>
+            <p><input class="l"type="checkbox" name="ballet" value="ballet"> Ballet</p>
            </label>
           </fieldset>
-          <input type="submit" value="Filter"></input>
-       </form>
+          <input class="submit" type="submit" value="Filter"></input>
      </div>
-     <div class="songs col right">
+     <div class="songs col right cf">
       <section class= "song">
        <h1>Overture</h1>
          <ul>
@@ -69,10 +65,10 @@
          </ul>
       </section>
       <section class="song">
-        <h1>Symphony no. 6</h1>
+        <h1>Allegro</h1>
          <ul>
           <li>Beethoven</li>
-          <li>Album Name</li>
+          <li>Op. No. 6</li>
           <li>Classical</li>
          </ul>
       </section>
@@ -94,5 +90,6 @@
       </section>
      </div>
   </wrapper>
+  <footer></footer>
 </body>
 </html>
