@@ -1,13 +1,88 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-
-
+  <nav>
+   <ul>
+    <li><a href="#">View Music</a></li>
+    <li><a href="#">Add Music</a></li>
+    <li><a href="#">Profile</a></li>
+  </nav>
+<!-- main content except for header/footer -->
+   <wrapper>
+     <div class="sidebar col">
+       <form>
+         <fieldset>
+           <label for="songLength">Song length:
+            <input type="range" id="songLength">
+           </label>
+          </fieldset>
+          <fieldset> 
+           <label for="artist">Artist:
+            <input name="artist" list="artistList">
+              <datalist id="artistList">
+              <option value="Mozart">
+              <option value="Tzhaikovsky">
+              <option value="Chopin">
+              <option value="Beethoven">
+              <option value="Bach">
+              </datalist>
+           </label>
+          </fieldset>
+          <fieldset>
+           <label for="album">Album:
+            <input name="album" list="albumList">
+              <datalist id="albumList">
+              <option value="The Magic Flute">
+              <option value="Swan Lake">
+              <option value="Fantasie">
+              <option value="Opus no.6">
+              <option value="Fugue no.32">
+              </datalist>
+           </label>
+          </fieldset>
+          <fieldset>
+           <legend>Genre</legend>
+           <label for="genre">
+            <input type="checkbox" name="baroque" value="baroque"> Baroque
+            <input type="checkbox" name="classical" value="classical"> Classical
+            <input type="checkbox" name="romantic" value="romantic"> Romantic
+            <input type="checkbox" name="opera" value="opera"> Opera
+            <input type="checkbox" name="ballet" value="ballet"> Ballet
+           </label>
+          </fieldset>
+          <input type="submit" value="Filter"></input>
+       </form>
+     </div>
+     <div class="songs col">
+      <section>
+       <h1>Song 1</h1>
+         <ul>
+          <li>Artist Name</li>
+          <li>Album Name</li>
+          <li>Genre</li>
+         </ul>
+        <h1>Song 2</h1>
+         <ul>
+          <li>Artist Name</li>
+          <li>Album Name</li>
+          <li>Genre</li>
+         </ul>
+        <h1>Song 3</h1>
+         <ul>
+          <li>Artist Name</li>
+          <li>Album Name</li>
+          <li>Genre</li>
+         </ul>
+  </wrapper>
 </body>
 </html>
+<!-- Create five options for the artist select element of any artist that you enjoy.
+Create at least five options for the album select element. One, or more, album for each artist.
+The links in the navigation bar don't need to link to anything just yet, you can use <a href="#">View music</a> for now
+Pick your four favorite songs from the artists you have chosen and use the information for each in the list that's on the right-hand side. You can use h1 tags, div tags, section tags... whatever you like. -->
