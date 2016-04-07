@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+/* all elements have the same border */
+nav, .col {
+  border: 2px solid black;
+  margin: 3px;
+}
+
+/* Nav Bar */
+nav {
+  background-color:#FFB4B0;
+}
+nav ul li {
+  display: inline;
+}
+
+/* Side Bar */
+.sidebar {
+	background-color: #4DD7FA;
+  float: left;
+  width: 25%;
+  
+}
+.sidebar fieldset {
+  border: none;
+  max-width: 100%;
+}
+
+/*Song Section*/
+.songs {
+	background-color: #FEFAC0;
+  float: right;
+  width: 70%;
+}
+
+section.song >h1 {
+  font-weight: normal;
+  color: #785616;
+  font-size: 1.6em;
+  padding: -5px 10% 5px;
+}
+section.song >ul li {
+ display: inline;
+}
