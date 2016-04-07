@@ -11,10 +11,22 @@ nav, .col {
 nav {
   background-color:#FFB4B0;
 }
-nav ul li {
-  display: inline;
+nav ul {
+  margin: 15px 15px;
+  padding: 0;
 }
-
+nav ul li {
+  display: inline-block;
+  padding-right: 4px;
+  font-size: .85em;
+}
+nav ul li:not(:last-child) {
+  border-right: 2px solid black;
+}
+nav ul li a.selected {
+  color: black;
+  text-decoration: none;
+}
 /* Side Bar */
 .sidebar {
 	background-color: #4DD7FA;
