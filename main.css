@@ -57,6 +57,24 @@ nav ul li a.visited {
 #album, #artist {
   width: 140px;
 }
+#genre ul {
+  margin: 0;
+  padding: 0;
+}
+#genre ul li {
+  display: inline-block;
+  float: left;
+  width: 76px;
+  margin: 1px 0 2px 6px;
+  padding: 2px 1px;
+}
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+
+}
 
 /*Song Section*/
 .songs {
