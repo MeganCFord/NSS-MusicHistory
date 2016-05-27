@@ -11,15 +11,21 @@ Any/all images are for educational/example purposes only and are all rights rese
 
 ## Instructions
 
+NSS Front-End Milestone 1 (Static Web) Exercise __: 
+
+[Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/2-the-static-web/exercises/SW_MUSIC_HISTORY_01.md)
 
 NSS Front-End Milestone 1 (Static Web) Exercise 15: 
-
 
 [Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/2-the-static-web/exercises/SW_MUSIC_HISTORY_02.md)
 
 NSS Front-end Milestone 2 (Single Page Apps) Exercise __: 
 
 [Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/3-single-page-applications/exercises/SP_JS_MUSIC_HISTORY_3.md)
+
+NSS Front-end Milestone 2 (single Page Apps) Exercise __:
+
+[Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/3-single-page-applications/exercises/SP_JS_MUSIC_HISTORY_4.md)
 
 ## Install
 
