@@ -4,6 +4,9 @@ var musicHistory = (function(injector) {
 
   //DOM grabbers.
   const songListDiv = document.getElementById("songListDiv");
+  injector.getSongListDiv = function() {
+    return songListDiv;
+  };
   const albumDiv = document.getElementById("albumList");
   const artistDiv = document.getElementById("artistList");
 
@@ -18,12 +21,13 @@ var musicHistory = (function(injector) {
 
   //main list div
       songListDiv.innerHTML += `
-      <section id = "song${songObject.id}" class= "song">
+      <section id = "${songObject.id}" class= "song">
         <h1>${songObject.song}</h1>
           <ul>
             <li>${songObject.artist}</li>
             <li>${songObject.album}</li>
             <li>${songObject.genre}</li>
+            <li><button class="delete">Delete Song</button></li>
          </ul>
       </section>`;
 

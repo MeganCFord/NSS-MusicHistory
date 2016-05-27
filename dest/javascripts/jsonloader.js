@@ -5,9 +5,7 @@ var musicHistory = (function(loader) {
 
   //parse songs object, puts into array, and pushes each object from the array into the songs array in songpusher.js (which calls song injector).
   loader.parseSongs = function() {
-    console.log("loaded");
     const stockSongs = JSON.parse(songsRequest.responseText).stockSongs;
-    console.log("stock song array", stockSongs);
     stockSongs.forEach(function(song) {
       musicHistory.pushSong(song);
     });

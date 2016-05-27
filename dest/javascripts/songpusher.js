@@ -6,12 +6,11 @@ var musicHistory = (function(pusher) {
 
   //DOM grabbers.
   const addSongButton = document.getElementById("addSongButton");
-  const listofGenreCheckBoxes = Array.from(document.getElementsByClassName("aGenre"));
 
   
 
   pusher.setSong = function (genreName) {
-
+    console.log("set song working", genreName );
     const currentSong = {
       song: document.getElementById("addSongName").value,
       artist: document.getElementById("addArtistName").value,
@@ -24,16 +23,20 @@ var musicHistory = (function(pusher) {
 
 
   pusher.getGenre = function() {
+    console.log("get genre function running");
+    const listofGenreCheckBoxes = Array.from(document.getElementsByClassName("aGenre"));
+
+    console.log("list of genre checkboxes", listofGenreCheckBoxes );
 
     let genreName = "null";
 
     listofGenreCheckBoxes.forEach(function(genre){
       if (genre.checked) {
         genreName = genre.value;
-      }
-      console.log("checked genre", genreName);
-      pusher.setSong(genreName);
+      } 
     });
+    console.log("checked genre", genreName);
+    pusher.setSong(genreName);
   
   };
 
@@ -41,6 +44,21 @@ var musicHistory = (function(pusher) {
     songs.push(song);
     musicHistory.populateTheDom(songs);
   };
+
+  //removes a song from the songs array. 
+  pusher.removeSong = function(id) {
+    let index = null;
+    songs.forEach(function(song){
+      if (song.id === id) {
+        index = songs.indexOf(song);
+      }
+    })
+    if (index > -1) {
+      songs.splice(index, 1);
+    } else {console.log("no match", index );}
+    musicHistory.populateTheDom(songs);
+  };
+
 
   //event listener
   addSongButton.addEventListener("click", pusher.getGenre);
