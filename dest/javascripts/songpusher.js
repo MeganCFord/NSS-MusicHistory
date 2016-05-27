@@ -2,7 +2,7 @@
 
 const songs = [];
 
-let musicHistory = (function(pusher) {
+var musicHistory = (function(pusher) {
 
   //DOM grabbers.
   const addSongButton = document.getElementById("addSongButton");
@@ -37,7 +37,7 @@ let musicHistory = (function(pusher) {
   
   };
 
-  musicHistory.pushSong = function(song) {
+  pusher.pushSong = function(song) {
     songs.push(song);
     musicHistory.populateTheDom(songs);
   };

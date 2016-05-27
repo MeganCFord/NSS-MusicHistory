@@ -1,5 +1,5 @@
 
-let musicHistory = (function(switcher) {
+var musicHistory = (function(switcher) {
 
   //DOM elements.
   const addMusicNavButton = document.getElementById("addMusicNavButton");
