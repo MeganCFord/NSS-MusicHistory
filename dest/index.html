@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <nav>
+   <ul>
+    <li ><button id="viewMusicNavButton" disabled>View Music</button></li>
+    <li><button id="addMusicNavButton">Add Music</button></li>
+    <!-- <li><a href="#">Profile</a></li> POSSIBLY USED LATER???-->
+    </ul>
+  </nav>
+<!-- main content except for header/footer -->
+   <wrapper>
+
+   <!-- add song div -->
+     <div id="addSongsDiv" class="addSongsDiv hidden">
+      <label class="addsonglabel" for="addSongName">Song Name 
+        <input id="addSongName" type="text" name="" value="" placeholder="">
+      </label>
+      <label class="addsonglabel" for="addArtistName">Artist Name
+        <input id="addArtistName" type="text" name="" value="" placeholder="">
+      </label>
+      <label class="addsonglabel" for="addAlbumName">Album Name
+        <input id="addAlbumName" type="text" name="" value="" placeholder="">
+      </label>
+      <label class="addsonglabel" for="addGenre" id="genres"> Genre:
+        <ul id="addGenre" class="genreList">
+        <!-- CHECKBOX genres dynamically added via songinjector.js forEach loop. -->
+        </ul>
+      </label>
+      <button id="addSongButton" class="addSongButton">Add Song</button>  
+     </div>
+
+     <!-- show song div -->
+    <div id="showSongsDiv" class="showSongsDiv">
+      <div class="sidebar col left cf">
+          <fieldset>
+            <label for="songLength">Song length:
+             <p><input type="range" id="songLength"></p>
+            </label>
+           </fieldset>
+           <fieldset> 
+            <label for="artist">Artist:
+               <p><select id="artistList">
+               <option value="chooseAnArtist">Choose An Artist</option>
+                 <!-- artists dynamically added via songinjector.js here. -->
+               </select></p>
+            </label>
+           </fieldset>
+           <fieldset>
+            <label for="album">Album:
+               <p><select id="albumList">
+               <option value="chooseAnAlbum">Choose An Album</option>
+               <!-- albums dynamically added via songinjector.js here -->
+               </select></p>
+            </label>
+           </fieldset>
+           <fieldset>
+            <legend>Genre:</legend>
+            <label for="genre" id="genre">
+            <ul class= "genreList">
+            <!-- genres dynamically added via songinjector.js forEach loop. -->
+             </ul>
+            </label>
+           </fieldset>
+           <input class="submit" type="submit" value="Filter">
+      </div>
+      <div id="songListDiv" class="songs col right cf">
+       <!-- the list of songs go here via songinjector.js. -->
+      </div>
+     </div>
+  </wrapper>
+  <footer></footer>
+  <script type="text/javascript" src="spa-switcher.js"></script>
+  <script type="text/javascript" src="songs.js"></script>
+  <script type="text/javascript" src="songInjector.js"></script>
+</body>
+</html>
