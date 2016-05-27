@@ -1,0 +1,54 @@
+/*eslint-disable no-console */
+
+let musicHistory = (function(songPusher) {
+
+
+  //DOM elements.
+  const addSongButton = document.getElementById("addSongButton");
+  const listOfGenreCheckBoxes = Array.from(document.getElementsByClassName("aGenre"));
+
+  //array of songs. to be preloaded with JSON and then made editable. 
+  const songs = [];
+  let genreName = null;
+
+
+ //make genre for song object. runs when add song is clicked and calls set song. 
+  songPusher.getGenre = function() {
+
+    listOfGenreCheckBoxes.forEach(function(genre) {
+      if (genre.checked) {
+        genreName = genre.value;
+      }
+      songPusher.setSong(genreName);
+    });
+  }; 
+
+
+  //make song object for array.
+  songPusher.setSong = function (genreName) {
+
+    const songToAdd = {
+      song: document.getElementById("addSongName").value,
+      artist: document.getElementById("addArtistName").value,
+      album: document.getElementById("addAlbumName").value,
+      genre: genreName
+    };
+    console.log("song to add", songToAdd);
+
+    songPusher.pushSong(songToAdd);
+  };
+
+
+  //push song to array. 
+  songPusher.pushSong = function(songToAdd) {
+    songs.push(songToAdd);
+    console.log("songs after pushing", songToAdd);
+  };
+
+
+  //"add song" button event listener- gets genre via getGenre first. Then sends selected genre to setSong, to create a songToAdd object. Then sends songToAdd object to pushSong, to add to array. 
+  addSongButton.addEventListener("click", songPusher.getGenre);
+
+  return songPusher;
+
+}(musicHistory || {}));
