@@ -1,4 +1,6 @@
-/*global songs */
+"use strict";
+
+let musicHistory = (function(injector) {
 
 //DOM grabbers.
 const songListDiv = document.getElementById("songListDiv");
@@ -48,4 +50,8 @@ const populateTheDom = function() {
   });
 };
 
-populateTheDom();
+
+
+
+  return Injector;
+}(musicHistory || {}));

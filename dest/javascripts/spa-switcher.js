@@ -13,7 +13,6 @@ let musicHistory = (function(switcher) {
     viewMusicNavButton.removeAttribute("disabled");
     addSongsDiv.classList.remove("hidden");
     showSongsDiv.classList.add("hidden");
-
   };
 
   //runs when 'view songs' button is clicked.
