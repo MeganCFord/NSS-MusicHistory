@@ -36,7 +36,7 @@ nav ul li a.visited {
 
 /*column height*/
 .col {
-  height: 370px;
+  min-height: 370px;
 }
 
 

@@ -19,13 +19,15 @@ NSS Front-End Milestone 1 (Static Web) Exercise 15:
 
 [Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/2-the-static-web/exercises/SW_MUSIC_HISTORY_02.md)
 
-NSS Front-end Milestone 2 (Single Page Apps) Exercise __: 
+NSS Front-end Milestone 2 (Single Page Apps) Exercise 9: 
 
 [Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/3-single-page-applications/exercises/SP_JS_MUSIC_HISTORY_3.md)
 
-NSS Front-end Milestone 2 (single Page Apps) Exercise __:
+
+NSS Front-end Milestone 2 (single Page Apps) Exercise 11:
 
 [Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/3-single-page-applications/exercises/SP_JS_MUSIC_HISTORY_4.md)
+
 
 ## Install
 
