@@ -28,12 +28,16 @@ NSS Front-end Milestone 2 (single Page Apps) Exercise 11:
 
 [Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/3-single-page-applications/exercises/SP_JS_MUSIC_HISTORY_4.md)
 
+NSS Front-end Milestone 3 (Modern Developer) Exercise 2:
+
+[Requirements For Project](https://github.com/nashville-software-school/front-end-milestones/blob/master/4-modern-javascript-developer/exercises/MJ_JQUERY_MUSIC_HISTORY_5.md)
 
 ## Install
 
 
 ``` 
 git clone https://github.com/MeganCFord/NSS-MusicHistory.git
+bower init
 cd musichistory-nss/dest
 open index.html
 ```
