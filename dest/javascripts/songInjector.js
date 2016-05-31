@@ -60,4 +60,4 @@ var musicHistory = (function(injector) {
 
 
   return injector;
-}(musicHistory || {}));
+}(musicHistory || {}))

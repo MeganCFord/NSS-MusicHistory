@@ -1,13 +1,8 @@
 "use strict";
 
+
 var musicHistory = (function(loader) {
   
-
-
-
-  
-
-
   //parse songs object, puts into array, and pushes each object from the array into the songs array in songpusher.js (which calls song injector).
   loader.parseSongs = function() {
     const stockSongs = JSON.parse(songsRequest.responseText).stockSongs;
@@ -52,3 +47,4 @@ var musicHistory = (function(loader) {
 
   return loader;
 }(musicHistory || {}));
+
