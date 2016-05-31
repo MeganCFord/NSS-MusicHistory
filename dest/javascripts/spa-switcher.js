@@ -1,25 +1,24 @@
 
-
-const addMusicNavButton = document.getElementById("addMusicNavButton");
-const viewMusicNavButton = document.getElementById("viewMusicNavButton");
-const addSongsDiv = document.getElementById("addSongsDiv");
-const showSongsDiv = document.getElementById("showSongsDiv");
+var musicHistory = (function(switcher){
 
 
-const switchtoAddView = function() {
-  addMusicNavButton.setAttribute("disabled", "disabled");
-  viewMusicNavButton.removeAttribute("disabled");
-  addSongsDiv.classList.remove("hidden");
-  showSongsDiv.classList.add("hidden");
+  switcher.switchtoAddView = function() {
+    $("#addMusicNavButton").attr("disabled", "disabled");
+    $("#viewMusicNavButton").removeAttr("disabled");
+    $("#addSongsDiv").removeClass("hidden");
+    $("#showSongsDiv").addClass("hidden");
 
-};
+  };
 
-const switchtoViewView = function() {
-  addMusicNavButton.removeAttribute("disabled");
-  viewMusicNavButton.setAttribute("disabled", "disabled");
-  addSongsDiv.classList.add("hidden");
-  showSongsDiv.classList.remove("hidden");
-};
+  switcher.switchtoViewView = function() {
+    $("#addMusicNavButton").removeAttr("disabled");
+    $("#viewMusicNavButton").attr("disabled", "disabled");
+    $("#addSongsDiv").addClass("hidden");
+    $("#showSongsDiv").removeClass("hidden");
+  };
 
-addMusicNavButton.addEventListener("click", switchtoAddView);
-viewMusicNavButton.addEventListener("click", switchtoViewView);
+  $("#addMusicNavButton").on("click", switcher.switchtoAddView);
+  $("#viewMusicNavButton").on("click", switcher.switchtoViewView);
+
+  return switcher; 
+}(musicHistory || {}));

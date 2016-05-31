@@ -1,21 +1,16 @@
 var musicHistory = (function(deleter) {
   
 
-  const songListDiv = musicHistory.getSongListDiv();
-
-
   deleter.wasDeleteButtonClicked = function(e) {
-    if (e.target.classList.contains("delete")) {
-      const rowToRemove = e.target.parentNode.parentNode.parentNode;
+    if ($(e.target).hasClass("delete")) {
+      const rowToRemove = e.target.closest(".song");
       const idToRemove = rowToRemove.id;
-      console.log("id to remove", idToRemove );
-      const specificRow = document.getElementById(idToRemove);
-      specificRow.parentNode.removeChild(specificRow);
+      $(rowToRemove).remove();
       musicHistory.removeSong(idToRemove);
     }
   };
 
-  songListDiv.addEventListener("click", deleter.wasDeleteButtonClicked);
+  $("#songListDiv").on("click", (event) => {deleter.wasDeleteButtonClicked(event);});
 
 
   return deleter;
