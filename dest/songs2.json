@@ -1,0 +1,27 @@
+{
+  "stockSongs": [{
+    "id": "a",
+    "artist": "Tzchaikovsky",
+    "song": "Overture",
+    "album": "Swan Lake",
+    "genre": "Ballet"
+  }, {
+    "id": "b",
+    "artist": "Beethoven",
+    "song": "Allegro",
+    "album": "Op. No. 6",
+    "genre": "Classical"
+  }, {
+    "id": "c",
+    "artist": "Bach",
+    "song": "Fugue no.42 in C# Major",
+    "album": "Fugues and Preludes",
+    "genre": "Baroque"
+  }, {
+    "id": "d",
+    "artist": "Mozart",
+    "song": "Popagena",
+    "album": "The Magic Flute",
+    "genre": "Opera"
+  }]
+}

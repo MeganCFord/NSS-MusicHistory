@@ -1,32 +1,27 @@
 {
-  "stockSongs": [
-    {
-      "id": "1",
-      "artist": "Tzchaikovsky", 
-      "song": "Overture",
-      "album": "Swan Lake", 
-      "genre": "Ballet"
-    },
-    {
-      "id": "2",
-      "artist": "Beethoven", 
-      "song": "Allegro", 
-      "album": "Op. No. 6", 
-      "genre": "Classical"
-    },
-    { 
-      "id": "3",
-      "artist": "Bach", 
-      "song": "Fugue no.42 in C# Major", 
-      "album": "Fugues and Preludes", 
-      "genre": "Baroque"
-    },
-    {
-      "id": "4",
-      "artist": "Mozart", 
-      "song": "Popagena", 
-      "album": "The Magic Flute", 
-      "genre": "Opera"
-    }
-  ]
+  "stockSongs": [{
+    "id": "e",
+    "artist": "Tzchaikovsky",
+    "song": "1812 Overture",
+    "album": "1812",
+    "genre": "Classical"
+  }, {
+    "id": "f",
+    "artist": "Beethoven",
+    "song": "Fur Elise",
+    "album": "Songs for Elise",
+    "genre": "Classical"
+  }, {
+    "id": "g",
+    "artist": "Bach",
+    "song": "Prelude No. 2 in F Major",
+    "album": "Fugues and Preludes",
+    "genre": "Baroque"
+  }, {
+    "id": "h",
+    "artist": "Mozart",
+    "song": "The Marriage of Figaro",
+    "album": "The Marriage of Figaro",
+    "genre": "Opera"
+  }]
 }

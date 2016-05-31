@@ -12,6 +12,7 @@ var musicHistory = (function(pusher) {
   pusher.setSong = function (genreName) {
     console.log("set song working", genreName );
     const currentSong = {
+      id: songs.length+1,
       song: document.getElementById("addSongName").value,
       artist: document.getElementById("addArtistName").value,
       album: document.getElementById("addAlbumName").value,
@@ -51,11 +52,12 @@ var musicHistory = (function(pusher) {
     songs.forEach(function(song){
       if (song.id === id) {
         index = songs.indexOf(song);
+        return index;
       }
-    })
+    });
     if (index > -1) {
       songs.splice(index, 1);
-    } else {console.log("no match", index );}
+    }
     musicHistory.populateTheDom(songs);
   };
 
