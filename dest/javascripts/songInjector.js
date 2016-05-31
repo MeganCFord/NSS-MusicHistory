@@ -2,15 +2,6 @@
 
 var musicHistory = (function(injector) {
 
-  //DOM grabbers.
-  const songListDiv = document.getElementById("songListDiv");
-  injector.getSongListDiv = function() {
-    return songListDiv;
-  };
-  const albumDiv = document.getElementById("albumList");
-  const artistDiv = document.getElementById("artistList");
-
-  const genreDivs = Array.from(document.getElementsByClassName("genreList"));
   const arrayOfGenres = ["Ballet", "Classical", "Baroque", "Opera"];
 
   injector.populateTheDom = function(songs) {
@@ -20,7 +11,7 @@ var musicHistory = (function(injector) {
     songs.forEach(function(songObject) {
 
   //main list div
-      songListDiv.innerHTML += `
+      const songDiv = `
       <section id = "${songObject.id}" class= "song">
         <h1>${songObject.song}</h1>
           <ul>
@@ -31,33 +22,36 @@ var musicHistory = (function(injector) {
          </ul>
       </section>`;
 
+      $(songDiv).appendTo($("#songListDiv"));
+
     //album dropdown div 
-      albumDiv.innerHTML += `<option value="${songObject.album}">${songObject.album}</option>`;
+      $("#albumList").append(`<option value="${songObject.album}">${songObject.album}</option>`);
 
     //artist dropdown div 
-      artistDiv.innerHTML += `<option value="${songObject.artist}">${songObject.artist}</option>`;
+      $("#artistList").append(`<option value="${songObject.artist}">${songObject.artist}</option>`);
   
     });
   
     //genre checkbox div. runs off standard array.
-    genreDivs.forEach(function(div) {
+    $(".genreList").each(function() {
       for (let i = 0; i < arrayOfGenres.length; i++) {
-        div.innerHTML += `<li><input class="aGenre" type="checkbox" name="${arrayOfGenres[i]}" value="${arrayOfGenres[i]}"> ${arrayOfGenres[i]}</li>`;
+        const genreCheckbox = `<li><input class="aGenre" type="checkbox" name="${arrayOfGenres[i]}" value="${arrayOfGenres[i]}"> ${arrayOfGenres[i]}</li>`;
+        $(genreCheckbox).appendTo(this);
       }
     });
 
   };
 
   injector.clearTheDOM = function() {
-    songListDiv.innerHTML = "";
+    $("#songListDiv").empty();
 
-    genreDivs.forEach(function(div) {
-      div.innerHTML= "";
+    $(".genreList").each(function() {
+      $(this).empty();
     });
-    albumDiv.innerHTML= "";
-    artistDiv.innerHTML= "";
+    $("#albumList").empty();
+    $("#artistList").empty();
   };
 
 
   return injector;
-}(musicHistory || {}))
+}(musicHistory || {}));

@@ -1,0 +1,17 @@
+{
+  "name": "music history",
+  "homepage": "https://github.com/MeganCFord/NSS-MusicHistory",
+  "authors": [
+    "Megan Ford <meg.c.ford@gmail.com>"
+  ],
+  "description": "NSS music history ongoing exercise",
+  "main": "dest/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
