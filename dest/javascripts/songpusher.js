@@ -12,7 +12,7 @@ var musicHistory = (function(pusher) {
   pusher.setSong = function (genreName) {
     console.log("set song working", genreName );
     const currentSong = {
-      id: songs.length+1,
+      id: songs.length+1, 
       song: document.getElementById("addSongName").value,
       artist: document.getElementById("addArtistName").value,
       album: document.getElementById("addAlbumName").value,

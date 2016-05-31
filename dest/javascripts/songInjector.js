@@ -8,7 +8,7 @@ var musicHistory = (function(injector) {
     //first clear the DOM.
     injector.clearTheDOM(); 
 
-    songs.forEach(function(songObject) {
+    songs.forEach(function(songObject) { 
 
   //main list div
       const songDiv = `
